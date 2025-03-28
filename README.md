@@ -11,7 +11,8 @@ This is Web version of Budget Manager, running on Apache.
    2.1 [Data Structure](#21-data-structure)
    2.2 [Main Menu](#22-main-menu)
    2.3 [Project Files](#23-project-files)
-3. [Implementation Steps](#3-implementation-steps)
+   
+4. [Implementation Steps](#3-implementation-steps)
    3.1 [Adjust the Main File Code Into a Flask Web App](#31-adjust-the-main-file-code-into-a-flask-web-app)
    3.2 [Adjust the Functions File Code](#32-adjust-the-functions-file-code)
    3.3 [Create HTML Files for Each Function](#33-create-html-files-for-each-function)
@@ -22,9 +23,10 @@ This is Web version of Budget Manager, running on Apache.
    3.8 [Install Flask](#38-install-flask)
    3.9 [Perform the Required Changes for HTTPS Workability](#39-perform-the-required-changes-for-https-workability)
    3.10 [Restart Apache Web Server](#310-restart-apache-web-server)
-4. [License](#4-license)
-5. [Author](#5-author)
-6. [Feedback](#6-feedback)
+   
+6. [License](#4-license)
+7. [Author](#5-author)
+8. [Feedback](#6-feedback)
 
 
 ## 2. Code Explaination
