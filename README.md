@@ -6,24 +6,24 @@ This is Web version of Budget Manager, running on Apache.
 
 ## Table of Contents
 
-[1. Intro](#budget-manager-web-project)
+[1. Introduction](#budget-manager-web-project)
 
 [2. Code Explanation](#code-explanation)
- - [2.1 Data Structure](#data-structure)
- - [2.2 Main Menu](#main-menu)
- - [2.3 Project Files](#project-files)
+ - [2.1. Data Structure](#data-structure)
+ - [2.2. Main Menu](#main-menu)
+ - [2.3. Project Files](#project-files)
 
 [3. Implementation Steps](#implementation-steps)
- - [3.1 Adjust the Main File Code Into a Flask Web App](#adjust-the-main-file-code-into-a-flask-web-app)
- - [3.2 Adjust the Functions File Code](#adjust-the-functions-file-code)
- - [3.3 Create HTML Files for Each Function](#create-html-files-for-each-function)
- - [3.4 Create a WSGI File for Apache](#create-a-wsgi-file-for-apache)
- - [3.5 Repository Files](#use-only-one-from-the-methods-below)
- - [3.6 Configure Apache to Use WSGI](#configure-apache-to-use-wsgi)
- - [3.7 Update Virtual Host Configuration](#update-virtual-host-configuration)
- - [3.8 Install Flask](#install-flask)
- - [3.9 Perform the Required Changes for HTTPS Workability](#perform-the-required-changes-for-https-workability)
- - [3.10 Restart Apache Web Server](#restart-apache-web-server)
+ - [3.1. Adjust the Main File Code Into a Flask Web App](#adjust-the-main-file-code-into-a-flask-web-app)
+ - [3.2. Adjust the Functions File Code](#adjust-the-functions-file-code)
+ - [3.3. Create HTML Files for Each Function](#create-html-files-for-each-function)
+ - [3.4. Create a WSGI File for Apache](#create-a-wsgi-file-for-apache)
+ - [3.5. Repository Files](#use-only-one-from-the-methods-below)
+ - [3.6. Configure Apache to Use WSGI](#configure-apache-to-use-wsgi)
+ - [3.7. Update Virtual Host Configuration](#update-virtual-host-configuration)
+ - [3.8. Install Flask](#install-flask)
+ - [3.9. Perform the Required Changes for HTTPS Workability](#perform-the-required-changes-for-https-workability)
+ - [3.10. Restart Apache Web Server](#restart-apache-web-server)
 
 [4. License](#license)
 
@@ -31,8 +31,8 @@ This is Web version of Budget Manager, running on Apache.
 
 [6. Feedback](#feedback)
 
-## Code Explaination
-### Data Structure
+## 2. Code Explaination
+### 2.1. Data Structure
 
 The program maintains a dictionary that stores the user's balance and a list of transactions.<br>
 Each transaction includes details like type (income/expense), amount, and description:
@@ -43,13 +43,13 @@ Each transaction includes details like type (income/expense), amount, and descri
 *```{"type": "expense", "amount": 500, "description": "Groceries"}```*<br>
 <br>The user's balance value will be updated after each transaction.
 
-### Main Menu
+### 2.2. Main Menu
 - Add Income<br>
 - Add Expense<br>
 - Show Balance<br>
 - Show Transaction History<br>
 
-### Project Files
+### 2.3. Project Files
 
 - *[```app.py```](https://github.com/desmondcoacher/budget-manager-web/blob/main/app.py)* Main file
 
@@ -66,9 +66,9 @@ Each transaction includes details like type (income/expense), amount, and descri
     - *[```history.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/history.html)* Showing Transactions History HTML file
 
 
-## Implementation Steps
+## 3. Implementation Steps
 
-### 1. Adjust the Main File Code Into a Flask Web App
+### 3.1. Adjust the Main File Code Into a Flask Web App
 Instead of a `while` loop with `input()` *(which is not relevant for HTML)*, endpoints that display HTML forms will be created. <br>Editing Main file including Flask Web App methon implementation.
 
 ```python
@@ -132,7 +132,7 @@ def exit_app():
 if __name__ == "__main__":
     app.run(debug=True)
 ```
-### 2. Adjust the Functions File Code
+### 3.2. Adjust the Functions File Code
 Instead of ```print``` function format ```return``` will be used.
 ```python
 # transactions.py
@@ -179,7 +179,7 @@ def show_transaction_history(transactions_database: dict) -> list:
     return transactions_database["transactions"]
 
 ```
-### 3. Create HTML Files for Each function
+### 3.3. Create HTML Files for Each function
 In this case, all ```.html``` files will be stored in **templates** folder, which will be created:
 - ```index.html``` for the Main Menu
 ```python
@@ -294,7 +294,7 @@ In this case, all ```.html``` files will be stored in **templates** folder, whic
 
 ```
 
-### 4. Create a WSGI File for Apache
+### 3.4. Create a WSGI File for Apache
 ```python
 # wsgi.py
 import sys
@@ -306,7 +306,7 @@ from app import app as application
 
 ```
 
-### 5. Repository Files
+### 3.5. Repository Files
 Use ***ONLY*** One from The Methods Below:
 - **5.1**. Copy/locate the files *```app.py```*, *```transactions.py```*, *```wsgi.py```* and *```templates```* folder to the project directory *(in case you created all the required files following the steps above)*
 
@@ -316,12 +316,12 @@ Use ***ONLY*** One from The Methods Below:
 
     *```sudo cp -r budget-manager-web/templates budget-manager-web/app.py budget-manager-web/transactions.py budget-manager-web/wsgi.py /var/www/"your-project-name"```*
 
-### 6. Configure Apache to Use WSGI
+### 3.6. Configure Apache to Use WSGI
 *```sudo apt-get install libapache2-mod-wsgi-py3```*
 
 ***Note:*** no need to run the command to enable mode because it will be automatically enabled when installation succeed.
 
-### 7. Update Virtual Host Configuration
+### 3.7. Update Virtual Host Configuration
 Add the lines below to your Virtual Host file:
 
 *sudo nano /etc/apache2/sites-available/"your-project-name".conf*
@@ -331,25 +331,25 @@ Add the lines below to your Virtual Host file:
 
 ```
 
-### 8. Install Flask
+### 3.8. Install Flask
 *```sudo apt install python3-flask```*
 
-### 9. Perform the Required Changes for HTTPS Workability *(In Case if Needs)*
+### 3.9. Perform the Required Changes for HTTPS Workability *(In Case if Needs)*
 
-### 10. Restart Apache Web Server
+### 3.10. Restart Apache Web Server
 *```sudo systemctl restart apache2```*
 
 ***Tip:*** use *```sudo tail -f /var/log/apache2/error.log```* command for debugging.
 
-## License
+## 4. License
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/desmondcoacher/budget-manager-web/blob/main/LICENSE)
 
-## Author
+## 5. Author
 
 - [@desmondcoacher](https://github.com/desmondcoacher)
 
 
-## Feedback
+## 6. Feedback
 
 If you have any feedback, feel free to contact me: desmond.c@campus.technion.ac.il
