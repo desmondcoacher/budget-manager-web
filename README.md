@@ -24,9 +24,9 @@ This is Web version of Budget Manager, running on Apache.
    3.9 [Perform the Required Changes for HTTPS Workability](#39-perform-the-required-changes-for-https-workability)<br>
    3.10 [Restart Apache Web Server](#310-restart-apache-web-server)<br>
    
-6. [License](#4-license)<br>
-7. [Author](#5-author)<br>
-8. [Feedback](#6-feedback)
+[6. License](#4-license)<br>
+[7. Author](#5-author)<br>
+[8. Feedback](#6-feedback)
 
 
 ## 2. Code Explaination
