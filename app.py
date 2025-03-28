@@ -28,17 +28,17 @@ def add_income():
     return render_template("add_income.html")
 
 @app.route("/add-expense", methods=["GET", "POST"])
-def add-expense():
+def add_expense():
     if request.method == "POST":
         try:
             amount = int(request.form["amount"])
             description = request.form["description"]
-            transactions.add-expense(transactions_database, amount, description)
+            transactions.add_expense(transactions_database, amount, description)
             return redirect(url_for("show_balance"))
         except ValueError:
             error = "Invalid amount. Please enter a number."
-            return render_template("add-expense.html", error=error)
-    return render_template("add-expense.html")
+            return render_template("add_expense.html", error=error)
+    return render_template("add_expense.html")
 
 @app.route("/show-balance")
 def show_balance():
