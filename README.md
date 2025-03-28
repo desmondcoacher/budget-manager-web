@@ -6,9 +6,9 @@ This is Web version of Budget Manager, running on Apache.
 
 ## Table of Contents
 
-1. [Intro](#budget-manager-web-project)
+[1. Intro](#budget-manager-web-project)
 
-2. [Code Explanation](#code-explanation)
+[2. Code Explanation](#code-explanation)
    - [Data Structure](#data-structure)
    - [Main Menu](#main-menu)
    - [Project Files](#project-files)
@@ -22,7 +22,7 @@ This is Web version of Budget Manager, running on Apache.
        - [balance.html (Display Current Balance)](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/balance.html)
        - [history.html (Transaction History)](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/history.html)
 
-3. [Implementation Steps](#implementation-steps)
+[3. Implementation Steps](#implementation-steps)
    - [Adjust the Main File Code Into a Flask Web App](#adjust-the-main-file-code-into-a-flask-web-app)
    - [Adjust the Functions File Code](#adjust-the-functions-file-code)
    - [Create HTML Files for Each Function](#create-html-files-for-each-function)
@@ -34,11 +34,11 @@ This is Web version of Budget Manager, running on Apache.
    - [Perform the Required Changes for HTTPS Workability](#perform-the-required-changes-for-https-workability)
    - [Restart Apache Web Server](#restart-apache-web-server)
 
-4. [License](#license)
+[4. License](#license)
 
-5. [Author](#author)
+[5. Author](#author)
 
-6. [Feedback](#feedback)
+[6. Feedback](#feedback)
 
 ## Code Explaination
 ### Data Structure
