@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Transaction History</title>
+  </head>
+  <body>
+    <h1>Transaction History</h1>
+    {% if transactions %}
+      <ul>
+      {% for t in transactions %}
+        <li>
+          Type: {{ t.type|capitalize }}, Amount: {{ t.amount }} ₪, Description: {{ t.description }}
+        </li>
+      {% endfor %}
+      </ul>
+    {% else %}
+      <p>No transactions available.</p>
+    {% endif %}
+    <p><a href="{{ url_for('index') }}">Back to Menu</a></p>
+  </body>
+</html>

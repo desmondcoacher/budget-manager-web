@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Add Income</title>
+  </head>
+  <body>
+    <h1>Add Income</h1>
+    {% if error %}
+      <p style="color:red;">{{ error }}</p>
+    {% endif %}
+    <form method="post">
+      <label for="amount">Amount:</label>
+      <input type="number" name="amount" id="amount" required><br><br>
+      <label for="description">Description:</label>
+      <input type="text" name="description" id="description" required><br><br>
+      <input type="submit" value="Add Income">
+    </form>
+    <p><a href="{{ url_for('index') }}">Back to Menu</a></p>
+  </body>
+</html>
