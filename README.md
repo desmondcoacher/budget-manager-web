@@ -14,7 +14,7 @@ Each transaction includes details like type (income/expense), amount, and descri
 <br><br>Each transaction will be stored separately *(for example)*:
 
 *```{"type": "expense", "amount": 500, "description": "Groceries"}```*<br>
-<br><br>The user's balance value will be updated after each transaction.
+<br>The user's balance value will be updated after each transaction.
 
 ### Main Menu
 - Add Income<br>
