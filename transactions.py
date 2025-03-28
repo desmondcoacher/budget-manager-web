@@ -4,9 +4,9 @@ def menu_options():
     # This is now handled by the web interface (the index page)
     return {
         "1": "Add Income",
+        "2": "Add Expense",
         "3": "Show Balance",
         "4": "Show Transaction History",
-        "5": "Exit"
     }
 
 def add_income(transactions_database: dict, amount: int, description: str) -> dict:
