@@ -9,7 +9,7 @@ This is Web version of Budget Manager, running on Apache.
 [1. Intro](#budget-manager-web-project)
 
 [2. Code Explanation](#code-explanation)
-   - [Data Structure](#data-structure)
+    [2.1 Data Structure](#data-structure)
    - [Main Menu](#main-menu)
    - [Project Files](#project-files)
      - [app.py (Main file)](https://github.com/desmondcoacher/budget-manager-web/blob/main/app.py)
