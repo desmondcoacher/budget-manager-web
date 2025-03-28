@@ -328,7 +328,6 @@ Add the lines below to your Virtual Host file:
 ```
     WSGIDaemonProcess budgetmanager python-path=/var/www/<your-project-name>
     WSGIScriptAlias / /var/www/<your-project-name>/wsgi.py
-
 ```
 
 ### 3.8. Install Flask
