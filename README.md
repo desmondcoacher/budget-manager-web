@@ -13,7 +13,7 @@ This is Web version of Budget Manager, running on Apache.
    [2.3. Project Files](#23-project-files)<br>
    
 [3. Implementation Steps](#3-implementation-steps)<br>
-   [3.1. Adjust the Main File Code Into a Flask Web App](#31-adjust-the-main-file-code-into-a-flask-web-app)<br>
+   [3.1. Adjust the Main File Code Into a Flask Web App](#31-adjust-the-main-file-code-into-a-flask-web-app)
    [3.2. Adjust the Functions File Code](#32-adjust-the-functions-file-code)<br>
    [3.3. Create HTML Files for Each Function](#33-create-html-files-for-each-function)<br>
    [3.4. Create a WSGI File for Apache](#34-create-a-wsgi-file-for-apache)<br>
@@ -308,9 +308,9 @@ from app import app as application
 
 ### 3.5. Repository Files
 Use ***ONLY*** One from The Methods Below:
-- **3.5.1.**. Copy/locate the files *```app.py```*, *```transactions.py```*, *```wsgi.py```* and *```templates```* folder to the project directory *(in case you created all the required files following the steps above)*
+- **3.5.1.** Copy/locate the files *```app.py```*, *```transactions.py```*, *```wsgi.py```* and *```templates```* folder to the project directory *(in case you created all the required files following the steps above)*
 
-- **3.5.2.**. Clone repository, copy files from the Repository to the project directory
+- **3.5.2.** Clone repository, copy files from the Repository to the project directory
 
     *```git clone https://github.com/desmondcoacher/budget-manager-web```*
 
