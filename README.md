@@ -22,7 +22,7 @@ This is Web version of Budget Manager, running on Apache.
  - [3.8. Install Flask](#install-flask)
  - [3.9. Perform the Required Changes for HTTPS Workability](#perform-the-required-changes-for-https-workability)
  - [3.10. Restart Apache Web Server](#restart-apache-web-server)
-<br>[4. License](#license)
+<br><br>[4. License](#license)
 <br>[5. Author](#author)
 <br>[6. Feedback](#feedback)
 
