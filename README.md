@@ -8,23 +8,23 @@ This is Web version of Budget Manager, running on Apache.
 
 [1. Introduction](#1-introduction)<br>
 [2. Code Explanation](#2-code-explanation)<br>
-   [2.1 Data Structure](#21-data-structure)<br>
-   [2.2 Main Menu](#22-main-menu)<br>
-   [2.3 Project Files](#23-project-files)<br>
+   [2.1. Data Structure](#21-data-structure)<br>
+   [2.2. Main Menu](#22-main-menu)<br>
+   [2.3. Project Files](#23-project-files)<br>
    
 [3. Implementation Steps](#3-implementation-steps)<br>
-   [3.1 Adjust the Main File Code Into a Flask Web App](#31-adjust-the-main-file-code-into-a-flask-web-app)<br>
-   [3.2 Adjust the Functions File Code](#32-adjust-the-functions-file-code)<br>
-   [3.3 Create HTML Files for Each Function](#33-create-html-files-for-each-function)<br>
-   [3.4 Create a WSGI File for Apache](#34-create-a-wsgi-file-for-apache)<br>
-   [3.5 Repository Files](#35-repository-files)<br>
-      [3.5.1 Repository Files](#351-repository-files)<br>
-      [3.5.2 Repository Files](#352-repository-files)<br>
-   [3.6 Configure Apache to Use WSGI](#36-configure-apache-to-use-wsgi)<br>
-   [3.7 Update Virtual Host Configuration](#37-update-virtual-host-configuration)<br>
-   [3.8 Install Flask](#38-install-flask)<br>
-   [3.9 Perform the Required Changes for HTTPS Workability](#39-perform-the-required-changes-for-https-workability)<br>
-   [3.10 Restart Apache Web Server](#310-restart-apache-web-server)<br>
+   [3.1. Adjust the Main File Code Into a Flask Web App](#31-adjust-the-main-file-code-into-a-flask-web-app)<br>
+   [3.2. Adjust the Functions File Code](#32-adjust-the-functions-file-code)<br>
+   [3.3. Create HTML Files for Each Function](#33-create-html-files-for-each-function)<br>
+   [3.4. Create a WSGI File for Apache](#34-create-a-wsgi-file-for-apache)<br>
+   [3.5. Repository Files](#35-repository-files)<br>
+         [3.5.1. Copy/locate the Files](#351-repository-files)<br>
+         [3.5.2. Clone Repository](#352-repository-files)<br>
+   [3.6. Configure Apache to Use WSGI](#36-configure-apache-to-use-wsgi)<br>
+   [3.7. Update Virtual Host Configuration](#37-update-virtual-host-configuration)<br>
+   [3.8. Install Flask](#38-install-flask)<br>
+   [3.9. Perform the Required Changes for HTTPS Workability](#39-perform-the-required-changes-for-https-workability)<br>
+   [3.10. Restart Apache Web Server](#310-restart-apache-web-server)<br>
    
 [4. License](#4-license)<br>
 [5. Author](#5-author)<br>
@@ -32,7 +32,7 @@ This is Web version of Budget Manager, running on Apache.
 
 
 ## 2. Code Explaination
-### 2.1 Data Structure
+### 2.1. Data Structure
 
 The program maintains a dictionary that stores the user's balance and a list of transactions.<br>
 Each transaction includes details like type (income/expense), amount, and description:
@@ -43,13 +43,13 @@ Each transaction includes details like type (income/expense), amount, and descri
 *```{"type": "expense", "amount": 500, "description": "Groceries"}```*<br>
 <br>The user's balance value will be updated after each transaction.
 
-### 2.2 Main Menu
+### 2.2. Main Menu
 - Add Income<br>
 - Add Expense<br>
 - Show Balance<br>
 - Show Transaction History<br>
 
-### 2.3 Project Files
+### 2.3. Project Files
 
 - *[```app.py```](https://github.com/desmondcoacher/budget-manager-web/blob/main/app.py)* Main file
 
@@ -68,7 +68,7 @@ Each transaction includes details like type (income/expense), amount, and descri
 
 ## 3. Implementation Steps
 
-### 3.1 Adjust the Main File Code Into a Flask Web App
+### 3.1. Adjust the Main File Code Into a Flask Web App
 Instead of a `while` loop with `input()` *(which is not relevant for HTML)*, endpoints that display HTML forms will be created. <br>Editing Main file including Flask Web App methon implementation.
 
 ```python
@@ -132,7 +132,7 @@ def exit_app():
 if __name__ == "__main__":
     app.run(debug=True)
 ```
-### 3.2 Adjust the Functions File Code
+### 3.2. Adjust the Functions File Code
 Instead of ```print``` function format ```return``` will be used.
 ```python
 # transactions.py
@@ -179,7 +179,7 @@ def show_transaction_history(transactions_database: dict) -> list:
     return transactions_database["transactions"]
 
 ```
-### 3.3 Create HTML Files for Each function
+### 3.3. Create HTML Files for Each function
 In this case, all ```.html``` files will be stored in **templates** folder, which will be created:
 - ```index.html``` for the Main Menu
 ```python
@@ -294,7 +294,7 @@ In this case, all ```.html``` files will be stored in **templates** folder, whic
 
 ```
 
-### 3.4 Create a WSGI File for Apache
+### 3.4. Create a WSGI File for Apache
 ```python
 # wsgi.py
 import sys
@@ -306,22 +306,22 @@ from app import app as application
 
 ```
 
-### 3.5 Repository Files
+### 3.5. Repository Files
 Use ***ONLY*** One from The Methods Below:
-- **3.5.1**. Copy/locate the files *```app.py```*, *```transactions.py```*, *```wsgi.py```* and *```templates```* folder to the project directory *(in case you created all the required files following the steps above)*
+- **3.5.1.**. Copy/locate the files *```app.py```*, *```transactions.py```*, *```wsgi.py```* and *```templates```* folder to the project directory *(in case you created all the required files following the steps above)*
 
-- **3.5.2**. Clone repository, copy files from the Repository to the project directory
+- **3.5.2.**. Clone repository, copy files from the Repository to the project directory
 
     *```git clone https://github.com/desmondcoacher/budget-manager-web```*
 
     *```sudo cp -r budget-manager-web/templates budget-manager-web/app.py budget-manager-web/transactions.py budget-manager-web/wsgi.py /var/www/"your-project-name"```*
 
-### 3.6 Configure Apache to Use WSGI
+### 3.6. Configure Apache to Use WSGI
 *```sudo apt-get install libapache2-mod-wsgi-py3```*
 
 ***Note:*** no need to run the command to enable mode because it will be automatically enabled when installation succeed.
 
-### 3.7 Update Virtual Host Configuration
+### 3.7. Update Virtual Host Configuration
 Add the lines below to your Virtual Host file:
 
 *sudo nano /etc/apache2/sites-available/"your-project-name".conf*
@@ -331,12 +331,12 @@ Add the lines below to your Virtual Host file:
 
 ```
 
-### 3.8 Install Flask
+### 3.8. Install Flask
 *```sudo apt install python3-flask```*
 
-### 3.9 Perform the Required Changes for HTTPS Workability *(In Case if Needs)*
+### 3.9. Perform the Required Changes for HTTPS Workability *(In Case if Needs)*
 
-### 3.10 Restart Apache Web Server
+### 3.10. Restart Apache Web Server
 *```sudo systemctl restart apache2```*
 
 ***Tip:*** use *```sudo tail -f /var/log/apache2/error.log```* command for debugging.
