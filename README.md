@@ -10,10 +10,10 @@ This is Web version of Budget Manager, running on Apache.
 The program maintains a dictionary that stores the user's balance and a list of transactions.<br>
 Each transaction includes details like type (income/expense), amount, and description:<br>
 *```transactions_database = {"balance": 0, "transactions": []}```*
-<br><br>Each transaction will be stored separately *(for example)*:<br><br>
+<br><br>Each transaction will be stored separately *(for example)*:<br>
 
 *```{"type": "expense", "amount": 500, "description": "Groceries"}```*<br>
-The user's balance value will be updated after each transaction.
+<br>The user's balance value will be updated after each transaction.
 
 ### Main Menu
 - Add Income<br>
