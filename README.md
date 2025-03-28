@@ -6,7 +6,7 @@ This is Web version of Budget Manager, running on Apache.
 
 ## Table of Contents
 
-1. [Introduction](#1-introduction)<br>
+1. [Introduction](#1-introduction)
 2. [Code Explanation](#2-code-explanation)<br>
    2.1. [Data Structure](#21-data-structure)<br>
    2.2. [Main Menu](#22-main-menu)<br>
@@ -26,8 +26,8 @@ This is Web version of Budget Manager, running on Apache.
    3.9. [Perform the Required Changes for HTTPS Workability](#39-perform-the-required-changes-for-https-workability)<br>
    3.10. [Restart Apache Web Server](#310-restart-apache-web-server)<br>
    
-4. [License](#4-license)<br>
-5. [Author](#5-author)<br>
+4. [License](#4-license)
+5. [Author](#5-author)
 6. [Feedback](#6-feedback)
 
 
