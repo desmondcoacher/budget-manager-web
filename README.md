@@ -251,7 +251,7 @@ from app import app as application
 
 *git clone https://github.com/desmondcoacher/budget-manager-web*
 
-*sudo cp -r budget-manager-web/templates budget-manager-web/app.py budget-manager-web/transactions.py budget-manager-web/wsgi.py /var/www/* <your-project-name>
+*sudo cp -r budget-manager-web/templates budget-manager-web/app.py budget-manager-web/transactions.py budget-manager-web/wsgi.py /var/www/"your-project-name"*
 
 6. Configure Apache to Use WSGI
 ```sudo apt-get install libapache2-mod-wsgi-py3```
@@ -261,7 +261,7 @@ from app import app as application
 7. Update Virtual Host Configuration
 Add the lines below to your Virtual Host file
 
-*/etc/apache2/sites-available/* <your-project-name>.conf
+*/etc/apache2/sites-available/"your-project-name".conf*
 ```
     WSGIDaemonProcess budgetmanager python-path=/var/www/<your-project-name>
     WSGIScriptAlias / /var/www/<your-project-name>/wsgi.py
