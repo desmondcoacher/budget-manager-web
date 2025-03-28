@@ -7,11 +7,12 @@ This is Web version of Budget Manager, running on Apache.
 ## Code Explaination
 ### Data Structure
 
-The program maintains a dictionary that stores the user's balance and a list of transactions. Each transaction includes details like type (income/expense), amount, and description:
+The program maintains a dictionary that stores the user's balance and a list of transactions.<br>
+Each transaction includes details like type (income/expense), amount, and description:
 *```transactions_database = {"balance": 0, "transactions": []}```*
 Each transaction will be stored separately *(for example)*:<br>
 
-```{"type": "expense", "amount": 500, "description": "Groceries"}```<br><br>
+*```{"type": "expense", "amount": 500, "description": "Groceries"}```*<br><br>
 The user's balance value will be updated after each transaction.
 
 ### Main Menu
