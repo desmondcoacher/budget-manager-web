@@ -334,6 +334,9 @@ Add the lines below to your Virtual Host file:
 *```sudo apt install python3-flask```*
 
 ### 3.9. Perform the Required Changes for HTTPS Workability *(In Case if Needs)*
+In most cases if you're modifying already running website with HTTPS and only migrated this one, the changes you need to perform located in the file:
+*```/etc/apache2/sites-available/"your-project-name".conf```*
+The path in ```Directory``` needs to be updated and ```DocumentRoot``` path in ```VirtualHost``` needs to be updated as well.
 
 ### 3.10. Restart Apache Web Server
 *```sudo systemctl restart apache2```*
