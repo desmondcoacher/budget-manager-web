@@ -7,7 +7,7 @@ This is Web version of Budget Manager, running on Apache.
 ## Table of Contents
 
 1. [Introduction](#1-introduction)<br>
-2. [Code Explaination](#2-code-explaination)<br>
+2. [Code Explanation](#2-code-explanation)<br>
    2.1. [Data Structure](#21-data-structure)<br>
    2.2. [Main Menu](#22-main-menu)<br>
    2.3. [Project Files](#23-project-files)<br>
@@ -31,7 +31,7 @@ This is Web version of Budget Manager, running on Apache.
 6. [Feedback](#6-feedback)<br>
 
 
-## 2. Code Explaination
+## 2. Code Explanation
 ### 2.1. Data Structure
 
 The program maintains a dictionary that stores the user's balance and a list of transactions.<br>
