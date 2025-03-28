@@ -6,11 +6,11 @@ This is Web version of Budget Manager, running on Apache.
 
 ## Table of Contents
 
-1. [Introduction](#1-introduction)
-2. [Code Explanation](#2-code-explanation)
-   2.1 [Data Structure](#21-data-structure)
-   2.2 [Main Menu](#22-main-menu)
-   2.3 [Project Files](#23-project-files)
+1. [Introduction](#1-introduction)<br>
+2. [Code Explanation](#2-code-explanation)<br>
+   2.1 [Data Structure](#21-data-structure)<br>
+   2.2 [Main Menu](#22-main-menu)<br>
+   2.3 [Project Files](#23-project-files)<br>
    
 4. [Implementation Steps](#3-implementation-steps)
    3.1 [Adjust the Main File Code Into a Flask Web App](#31-adjust-the-main-file-code-into-a-flask-web-app)
