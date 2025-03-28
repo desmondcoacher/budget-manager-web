@@ -4,6 +4,45 @@
 
 This is Web version of Budget Manager, running on Apache.
 
+Table of Contents
+=================
+1. Budget Manager Web Project
+
+2. Code Explanation
+   2.1 Data Structure
+   2.2 Main Menu
+   2.3 Project Files
+       - app.py (Main file)
+       - transactions.py (Functions file)
+       - wsgi.py (WSGI file)
+       - templates folder
+           • index.html (Main Menu)
+           • add_income.html (Add Income Transactions)
+           • add_expense.html (Add Expense Transactions)
+           • balance.html (Display Current Balance)
+           • history.html (Transaction History)
+
+3. Implementation Steps
+   3.1 Adjust the Main File Code Into a Flask Web App
+   3.2 Adjust the Functions File Code
+   3.3 Create HTML Files for Each Function
+   3.4 Create a WSGI File for Apache
+   3.5 Use ONLY One from The Methods Below:
+       - Copy/locate the files to the project directory
+       - Clone repository and copy files from the repository
+   3.6 Configure Apache to Use WSGI
+   3.7 Update Virtual Host Configuration
+   3.8 Install Flask
+   3.9 Perform the Required Changes for HTTPS Workability (if needed)
+   3.10 Restart Apache Web Server
+
+4. License
+
+5. Author
+
+6. Feedback
+
+
 ## Code Explaination
 ### Data Structure
 
