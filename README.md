@@ -24,18 +24,19 @@ The user's balance value will be updated after each transaction.
 
 ### Project Files
 
-*[```app.py```](https://github.com/desmondcoacher/budget-manager-web/blob/main/app.py)* Main file
+- *[```app.py```](https://github.com/desmondcoacher/budget-manager-web/blob/main/app.py)* Main file
 
-*[```transactions.py```](https://github.com/desmondcoacher/budget-manager-web/blob/main/transactions.py)* Functions file
+- *[```transactions.py```](https://github.com/desmondcoacher/budget-manager-web/blob/main/transactions.py)* Functions file
 
-*[```wsgi.py```](https://github.com/desmondcoacher/budget-manager-web/blob/main/wsgi.py)* WGSI file
+- *[```wsgi.py```](https://github.com/desmondcoacher/budget-manager-web/blob/main/wsgi.py)* WGSI file
 
-*[```templates```](https://github.com/desmondcoacher/budget-manager-web/tree/main/templates)* HTML Templates folder, which contains:
-- *[```index.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/index.html)* Main Menu HTML file
-- *[```add_income.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/add_income.html)* Add Income Transactions HTML file
-- *[```add_expense.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/add_expense.html)* Add Expense Transactions HTML file
-- *[```balance.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/balance.html)* Displaying Current Balance HTML file
-- *[```history.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/history.html)* Showing Transactions History HTML file
+- *[```templates```](https://github.com/desmondcoacher/budget-manager-web/tree/main/templates)* HTML Templates folder, which contains:
+    - *[```index.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/index.html)* Main Menu HTML file
+
+    - *[```add_income.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/add_income.html)* Add Income Transactions HTML file
+    - *[```add_expense.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/add_expense.html)* Add Expense Transactions HTML file
+    - *[```balance.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/balance.html)* Displaying Current Balance HTML file
+    - *[```history.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/history.html)* Showing Transactions History HTML file
 
 
 ## Implementation Steps
