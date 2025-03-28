@@ -27,7 +27,7 @@ This is Web version of Budget Manager, running on Apache.
    - [Adjust the Functions File Code](#adjust-the-functions-file-code)
    - [Create HTML Files for Each Function](#create-html-files-for-each-function)
    - [Create a WSGI File for Apache](#create-a-wsgi-file-for-apache)
-   - [Use ONLY One from The Methods Below](#use-only-one-from-the-methods-below)
+   - [Repository Files](#use-only-one-from-the-methods-below)
    - [Configure Apache to Use WSGI](#configure-apache-to-use-wsgi)
    - [Update Virtual Host Configuration](#update-virtual-host-configuration)
    - [Install Flask](#install-flask)
@@ -315,7 +315,8 @@ from app import app as application
 
 ```
 
-### 5. Use ONLY One from The Methods Below:
+### 5. Repository Files
+Use *ONLY* One from The Methods Below:
 - **5.1**. Copy/locate the files *```app.py```*, *```transactions.py```*, *```wsgi.py```* and *```templates```* folder to the project directory *(in case you created all the required files following the steps above)*
 
 - **5.2**. Clone repository, copy files from the Repository to the project directory
