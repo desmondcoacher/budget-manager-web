@@ -4,44 +4,41 @@
 
 This is Web version of Budget Manager, running on Apache.
 
-Table of Contents
-=================
-1. Budget Manager Web Project
+## Table of Contents
 
-2. Code Explanation
-   2.1 Data Structure
-   2.2 Main Menu
-   2.3 Project Files
-       - app.py (Main file)
-       - transactions.py (Functions file)
-       - wsgi.py (WSGI file)
-       - templates folder
-           • index.html (Main Menu)
-           • add_income.html (Add Income Transactions)
-           • add_expense.html (Add Expense Transactions)
-           • balance.html (Display Current Balance)
-           • history.html (Transaction History)
+1. [Intro](#budget-manager-web-project)
 
-3. Implementation Steps
-   3.1 Adjust the Main File Code Into a Flask Web App
-   3.2 Adjust the Functions File Code
-   3.3 Create HTML Files for Each Function
-   3.4 Create a WSGI File for Apache
-   3.5 Use ONLY One from The Methods Below:
-       - Copy/locate the files to the project directory
-       - Clone repository and copy files from the repository
-   3.6 Configure Apache to Use WSGI
-   3.7 Update Virtual Host Configuration
-   3.8 Install Flask
-   3.9 Perform the Required Changes for HTTPS Workability (if needed)
-   3.10 Restart Apache Web Server
+2. [Code Explanation](#code-explanation)
+   - [Data Structure](#data-structure)
+   - [Main Menu](#main-menu)
+   - [Project Files](#project-files)
+     - [app.py (Main file)](https://github.com/desmondcoacher/budget-manager-web/blob/main/app.py)
+     - [transactions.py (Functions file)](https://github.com/desmondcoacher/budget-manager-web/blob/main/transactions.py)
+     - [wsgi.py (WSGI file)](https://github.com/desmondcoacher/budget-manager-web/blob/main/wsgi.py)
+     - [templates folder](#templates-folder)
+       - [index.html (Main Menu HTML)](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/index.html)
+       - [add_income.html (Add Income Transactions)](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/add_income.html)
+       - [add_expense.html (Add Expense Transactions)](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/add_expense.html)
+       - [balance.html (Display Current Balance)](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/balance.html)
+       - [history.html (Transaction History)](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/history.html)
 
-4. License
+3. [Implementation Steps](#implementation-steps)
+   - [Adjust the Main File Code Into a Flask Web App](#adjust-the-main-file-code-into-a-flask-web-app)
+   - [Adjust the Functions File Code](#adjust-the-functions-file-code)
+   - [Create HTML Files for Each Function](#create-html-files-for-each-function)
+   - [Create a WSGI File for Apache](#create-a-wsgi-file-for-apache)
+   - [Use ONLY One from The Methods Below](#use-only-one-from-the-methods-below)
+   - [Configure Apache to Use WSGI](#configure-apache-to-use-wsgi)
+   - [Update Virtual Host Configuration](#update-virtual-host-configuration)
+   - [Install Flask](#install-flask)
+   - [Perform the Required Changes for HTTPS Workability](#perform-the-required-changes-for-https-workability)
+   - [Restart Apache Web Server](#restart-apache-web-server)
 
-5. Author
+4. [License](#license)
 
-6. Feedback
+5. [Author](#author)
 
+6. [Feedback](#feedback)
 
 ## Code Explaination
 ### Data Structure
