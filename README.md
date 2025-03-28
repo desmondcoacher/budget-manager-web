@@ -235,43 +235,45 @@ def show_transaction_history(transactions_database: dict) -> list:
 4. Create a WSGI File for Apache (wsgi.py will be created)
 ```
 # wsgi.py
+import sys
+import logging
+logging.basicConfig(stream=sys.stderr)
+sys.path.insert(0, "/var/www/<your-project-name>")  # adjust this to your project directory
 
 from app import app as application
 
-# The variable 'application' is the WSGI callable that Apache will use.
-
 ```
 
-5. Configure Apache to Use WSGI
+5. Use only One from Two Methods Below:
+5.1 Copy/locate the files app.py, transactions.py, wsgi.py and templates folder to the project directory (in case you created all the required files following the steps above)
+
+5.2 Clone repository, copy files from the Repository to the project directory
+
+*git clone https://github.com/desmondcoacher/budget-manager-web*
+
+*sudo cp -r budget-manager-web/templates budget-manager-web/app.py budget-manager-web/transactions.py budget-manager-web/wsgi.py /var/www/<your-project-name>*
+
+6. Configure Apache to Use WSGI
 ```sudo apt-get install libapache2-mod-wsgi-py3```
 
 **Note:** no need to run the command to enable mode because it will be automatically enabled when installation succeed.
 
-6. Update Virtual Host Configuration
-Add the lines below to your Virtual Host file, for example 
+7. Update Virtual Host Configuration
+Add the lines below to your Virtual Host file
 
-*/etc/apache2/sites-available/budget-manager-web.conf*
+*/etc/apache2/sites-available/<your-project-name>.conf*
 ```
-    WSGIDaemonProcess budgetmanager python-path=/var/www/budget-manager-web
-    WSGIScriptAlias / /var/www/budget-manager-web/wsgi.py
+    WSGIDaemonProcess budgetmanager python-path=/var/www/<your-project-name>
+    WSGIScriptAlias / /var/www/<your-project-name>/wsgi.py
 
 ```
-
-7. Use only One from Two Methods Below:
-7.1 Copy/locate the files app.py, transactions.py, wsgi.py and templates folder to the project directory (in case you created all the required files following the steps above)
-
-7.2 Clone repository, copy files from the Repository to the project directory
-
-*git clone https://github.com/desmondcoacher/budget-manager-web*
-
-*cp -r budget-manager-web/templates budget-manager-web/app.py budget-manager-web/transactions.py wsgi.py /var/www/budget-manager-web*
 
 8. Install Flask
 ```python
 sudo apt install python3-flask
 ```
 
-9. Perform Requeired Changes for HTTPS Workability for the new wbsite *(Optional)*
+9. Perform Requeired Changes for HTTPS Workability for the new wbsite *(In Case if Needs)*
 
 10. Restart Apache Web Server
 *sudo systemctl restart apache2*
