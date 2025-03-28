@@ -155,7 +155,7 @@ def show_transaction_history(transactions_database: dict) -> list:
 ### 3. Create HTML Files for Each function
 In this case, all ```.html``` files will be stored in **templates** folder, which will be created:
 - ```index.html``` for the Main Menu
-```
+```python
 <!doctype html>
 <html lang="en">
   <head>
@@ -175,7 +175,7 @@ In this case, all ```.html``` files will be stored in **templates** folder, whic
 
 ```
 - ```add_income.html``` for Adding Income Transactions
-```
+```python
 <!doctype html>
 <html lang="en">
   <head>
@@ -200,7 +200,7 @@ In this case, all ```.html``` files will be stored in **templates** folder, whic
 
 ```
 - ```add_expense.html``` for Adding Expense Transactions
-```
+```python
 <!doctype html>
 <html lang="en">
   <head>
@@ -225,7 +225,7 @@ In this case, all ```.html``` files will be stored in **templates** folder, whic
 
 ```
 - ```balance.html``` for Displaying Current Balance
-```
+```python
 <!doctype html>
 <html lang="en">
   <head>
@@ -241,7 +241,7 @@ In this case, all ```.html``` files will be stored in **templates** folder, whic
 
 ```
 - ```history.html``` for Showing Transactions History
-```
+```python
 <!doctype html>
 <html lang="en">
   <head>
@@ -268,7 +268,7 @@ In this case, all ```.html``` files will be stored in **templates** folder, whic
 ```
 
 ### 4. Create a WSGI File for Apache
-```
+```python
 # wsgi.py
 import sys
 import logging
