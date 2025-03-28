@@ -8,7 +8,7 @@ This is Web version of Budget Manager, running on Apache.
 
 [1. Introduction](#budget-manager-web-project)
 <br>[2. Code Explanation](#code-explanation)
- <br>- [2.1. Data Structure](#data-structure)
+ <br>  [2.1. Data Structure](#data-structure)
  <br>- [2.2. Main Menu](#main-menu)
  <br>- [2.3. Project Files](#project-files)
 <br>[3. Implementation Steps](#implementation-steps)
