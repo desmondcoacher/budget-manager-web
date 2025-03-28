@@ -6,32 +6,26 @@ This is Web version of Budget Manager, running on Apache.
 
 ## Table of Contents
 
-[1. Introduction](#budget-manager-web-project)<br>
-2. Code Explanation
-    2.1. Data Structure
+1. [Introduction](#1-introduction)
+2. [Code Explanation](#2-code-explanation)
+   - [Data Structure](#21-data-structure)
+   - [Main Menu](#22-main-menu)
+   - [Project Files](#23-project-files)
+3. [Implementation Steps](#3-implementation-steps)
+   - [Adjust the Main File Code Into a Flask Web App](#31-adjust-the-main-file-code-into-a-flask-web-app)
+   - [Adjust the Functions File Code](#32-adjust-the-functions-file-code)
+   - [Create HTML Files for Each Function](#33-create-html-files-for-each-function)
+   - [Create a WSGI File for Apache](#34-create-a-wsgi-file-for-apache)
+   - [Repository Files](#35-repository-files)
+   - [Configure Apache to Use WSGI](#36-configure-apache-to-use-wsgi)
+   - [Update Virtual Host Configuration](#37-update-virtual-host-configuration)
+   - [Install Flask](#38-install-flask)
+   - [Perform the Required Changes for HTTPS Workability](#39-perform-the-required-changes-for-https-workability)
+   - [Restart Apache Web Server](#310-restart-apache-web-server)
+4. [License](#4-license)
+5. [Author](#5-author)
+6. [Feedback](#6-feedback)
 
-    
-- [2.2. Main Menu](#main-menu)
-- [2.3. Project Files](#project-files)
-  
-[3. Implementation Steps](#implementation-steps)
- - [3.1. Adjust the Main File Code Into a Flask Web App](#adjust-the-main-file-code-into-a-flask-web-app)
- - [3.2. Adjust the Functions File Code](#adjust-the-functions-file-code)
- - [3.3. Create HTML Files for Each Function](#create-html-files-for-each-function)
- - [3.4. Create a WSGI File for Apache](#create-a-wsgi-file-for-apache)
- - [3.5. Repository Files](#use-only-one-from-the-methods-below)
-   - [3.5.1. Copy/locate the Files](#use-only-one-from-the-methods-below)
-   - [3.5.2. Clone Repository](#use-only-one-from-the-methods-below)
-     
- - [3.6. Configure Apache to Use WSGI](#configure-apache-to-use-wsgi)
- - [3.7. Update Virtual Host Configuration](#update-virtual-host-configuration)
- - [3.8. Install Flask](#install-flask)
- - [3.9. Perform the Required Changes for HTTPS Workability](#perform-the-required-changes-for-https-workability)
- - [3.10. Restart Apache Web Server](#restart-apache-web-server)
-   
-[4. License](#license)<br>
-[5. Author](#author)<br>
-[6. Feedback](#feedback)
 
 ## 2. Code Explaination
 ### 2.1. Data Structure
