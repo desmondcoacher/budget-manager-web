@@ -2,7 +2,7 @@
 
 # Budget Manager Web Project
 
-This is Budget Manager Web version, running on Apache.
+This is Web version of Budget Manager, running on Apache.
 
 ## Code Explaination
 ### Data Structure
