@@ -261,7 +261,7 @@ from app import app as application
 7. Update Virtual Host Configuration
 Add the lines below to your Virtual Host file
 
-*sudo nano /etc/apache2/sites-available/<"your-project-name".conf*
+*sudo nano /etc/apache2/sites-available/"your-project-name".conf*
 ```
     WSGIDaemonProcess budgetmanager python-path=/var/www/<your-project-name>
     WSGIScriptAlias / /var/www/<your-project-name>/wsgi.py
