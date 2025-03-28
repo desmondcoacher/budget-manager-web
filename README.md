@@ -12,9 +12,9 @@ This is Web version of Budget Manager, running on Apache.
    [2.2. Main Menu](#22-main-menu)<br>
    [2.3. Project Files](#23-project-files)<br>
    
-[3. Implementation Steps](#3-implementation-steps)
-   [3.1. Adjust the Main File Code Into a Flask Web App](#31-adjust-the-main-file-code-into-a-flask-web-app)
-   [3.2. Adjust the Functions File Code](#32-adjust-the-functions-file-code)<br>
+3. [Implementation Steps](#3-implementation-steps)<br>
+   3.1. [Adjust the Main File Code Into a Flask Web App](#31-adjust-the-main-file-code-into-a-flask-web-app)<br>
+   3.2. [Adjust the Functions File Code](#32-adjust-the-functions-file-code)<br>
    [3.3. Create HTML Files for Each Function](#33-create-html-files-for-each-function)<br>
    [3.4. Create a WSGI File for Apache](#34-create-a-wsgi-file-for-apache)<br>
    [3.5. Repository Files](#35-repository-files)<br>
