@@ -280,7 +280,7 @@ from app import app as application
 ```
 
 ### 5. Use ONLY One from The Methods Below:
-- **5.1**. Copy/locate the files ```app.py```, ```transactions.py```, ```wsgi.py``` and ```templates folder``` to the project directory *(in case you created all the required files following the steps above)*
+- **5.1**. Copy/locate the files *```app.py```*, *```transactions.py```*, *```wsgi.py```* and *```templates```* folder to the project directory *(in case you created all the required files following the steps above)*
 
 - **5.2**. Clone repository, copy files from the Repository to the project directory
 
