@@ -17,9 +17,9 @@ This is Web version of Budget Manager, running on Apache.
    3.2. [Adjust the Functions File Code](#32-adjust-the-functions-file-code)<br>
    3.3. [Create HTML Files for Each Function](#33-create-html-files-for-each-function)<br>
    3.4. [Create a WSGI File for Apache](#34-create-a-wsgi-file-for-apache)<br>
-   3.5. [Repository Files](#35-repository-files)<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.1. [Copy/locate the Files](#35-repository-files)<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.2. [Clone Repository](#35-repository-files)<br>
+   3.5. [Adding Repository Files](#35-adding-repository-files)<br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.1. [Copy/Locate the Files](#35-adding-repository-files)<br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.2. [Clone Repository](#35-adding-repository-files)<br>
    3.6. [Configure Apache to Use WSGI](#36-configure-apache-to-use-wsgi)<br>
    3.7. [Update Virtual Host Configuration](#37-update-virtual-host-configuration)<br>
    3.8. [Install Flask](#38-install-flask)<br>
@@ -306,7 +306,7 @@ from app import app as application
 
 ```
 
-### 3.5. Repository Files
+### 3.5. Adding Repository Files
 Use ***ONLY*** One from The Methods Below:
 - **3.5.1.** Copy/locate the files *```app.py```*, *```transactions.py```*, *```wsgi.py```* and *```templates```* folder to the project directory *(in case you created all the required files following the steps above)*
 
