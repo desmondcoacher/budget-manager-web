@@ -35,7 +35,7 @@ The user's balance value will be updated after each transaction.
 - *[```add_income.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/add_income.html)* Add Income Transactions HTML file
 - *[```add_expense.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/add_expense.html)* Add Expense Transactions HTML file
 - *[```balance.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/balance.html)* Displaying Current Balance HTML file
-- - *[```history.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/history.html)* Showing Transactions History HTML file
+- *[```history.html```](https://github.com/desmondcoacher/budget-manager-web/blob/main/templates/history.html)* Showing Transactions History HTML file
 
 
 ## Implementation Steps
