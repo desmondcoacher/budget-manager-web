@@ -18,8 +18,9 @@ This is Web version of Budget Manager, running on Apache.
  - [3.3. Create HTML Files for Each Function](#create-html-files-for-each-function)
  - [3.4. Create a WSGI File for Apache](#create-a-wsgi-file-for-apache)
  - [3.5. Repository Files](#use-only-one-from-the-methods-below)
-   - [3.5.1. Repository Files](#use-only-one-from-the-methods-below)
-   - [3.5.2. Repository Files](#use-only-one-from-the-methods-below)
+   - [3.5.1. Copy/locate the Files](#use-only-one-from-the-methods-below)
+   - [3.5.2. Clone Repository](#use-only-one-from-the-methods-below)
+     
  - [3.6. Configure Apache to Use WSGI](#configure-apache-to-use-wsgi)
  - [3.7. Update Virtual Host Configuration](#update-virtual-host-configuration)
  - [3.8. Install Flask](#install-flask)
