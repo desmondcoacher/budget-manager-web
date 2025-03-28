@@ -284,9 +284,9 @@ from app import app as application
 
 - **5.2**. Clone repository, copy files from the Repository to the project directory
 
-*```git clone https://github.com/desmondcoacher/budget-manager-web```*
+    *```git clone https://github.com/desmondcoacher/budget-manager-web```*
 
-*```sudo cp -r budget-manager-web/templates budget-manager-web/app.py budget-manager-web/transactions.py budget-manager-web/wsgi.py /var/www/"your-project-name"```*
+    *```sudo cp -r budget-manager-web/templates budget-manager-web/app.py budget-manager-web/transactions.py budget-manager-web/wsgi.py /var/www/"your-project-name"```*
 
 ### 6. Configure Apache to Use WSGI
 *```sudo apt-get install libapache2-mod-wsgi-py3```*
