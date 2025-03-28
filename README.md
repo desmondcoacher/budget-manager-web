@@ -1,12 +1,44 @@
+![Logo](https://png.pngtree.com/png-vector/20220910/ourmid/pngtree-budgeting-icon-png-image_6145091.png)
 
-# Budget Manager Web
+# Budget Manager Web Project
+
 This is Budget Manager Web version, running on Apache.
 
-## Implementation Steps
-1. Adjust the Main File Code into a Flask Web App (app.py will be created)
-Note: Instead of a while loop with input() (which is not relevant for html), endpoints that display HTML forms will be created.
+## Code Explaination
+### Data Structure
 
+The program maintains a dictionary that stores the user's balance and a list of transactions. Each transaction includes details like type (income/expense), amount, and description:
+```python
+transactions_database = {"balance": 0, "transactions": []}
 ```
+Each transaction will be stored separately *(for example)*:<br>
+
+```{"type": "expense", "amount": 500, "description": "Groceries"}```<br><br>
+The user's balance value will be updated after each transaction.
+
+### Main Menu
+- Add Income<br>
+- Add Expense<br>
+- Show Balance<br>
+- Show Transaction History<br>
+
+### Project Files
+
+*[```app.py```](https://github.com/desmondcoacher/budget-manager-web/blob/main/app.py)* Main file
+
+*[```transactions.py```](https://github.com/desmondcoacher/budget-manager-web/blob/main/transactions.py)* Functions file
+
+*[```wsgi.py```](https://github.com/desmondcoacher/budget-manager-web/blob/main/wsgi.py)* WGSI file
+
+*[```templates```](https://github.com/desmondcoacher/budget-manager-web/tree/main/templates)* HTML Templates folder
+
+
+## Implementation Steps
+
+### 1. Adjust the Main File Code Into a Flask Web App
+Instead of a `while` loop with `input()` *(which is not relevant for HTML)*, endpoints that display HTML forms will be created. <br>Editing Main file including Flask Web App methon implementation.
+
+```python
 # app.py
 
 from flask import Flask, render_template, request, redirect, url_for
@@ -66,13 +98,10 @@ def exit_app():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
 ```
-
-2. Adjust the Functions File Code (transactions.py will be modified)
-**Note:** Instead of ```print``` function format ```return``` will be used.
-
-```
+### 2. Adjust the Functions File Code
+Instead of ```print``` function format ```return``` will be used.
+```python
 # transactions.py
 
 def menu_options():
@@ -117,9 +146,9 @@ def show_transaction_history(transactions_database: dict) -> list:
     return transactions_database["transactions"]
 
 ```
-
-3. Create HTML Files for Each Function (folder templates will be created)
-- index.html for main menu
+### 3. Create HTML Files for Each function
+In this case, all ```.html``` files will be stored in **templates** folder, which will be created:
+- ```index.html``` for the Main Menu
 ```
 <!doctype html>
 <html lang="en">
@@ -139,7 +168,7 @@ def show_transaction_history(transactions_database: dict) -> list:
 </html>
 
 ```
-- add_income.html for adding income transaction
+- ```add_income.html``` for Adding Income Transactions
 ```
 <!doctype html>
 <html lang="en">
@@ -164,7 +193,7 @@ def show_transaction_history(transactions_database: dict) -> list:
 </html>
 
 ```
-- add_expense.html for adding expense transaction
+- ```add_expense.html``` for Adding Expense Transactions
 ```
 <!doctype html>
 <html lang="en">
@@ -189,7 +218,7 @@ def show_transaction_history(transactions_database: dict) -> list:
 </html>
 
 ```
-- balance.html for displaying current balance
+- ```balance.html``` for Displaying Current Balance
 ```
 <!doctype html>
 <html lang="en">
@@ -205,7 +234,7 @@ def show_transaction_history(transactions_database: dict) -> list:
 </html>
 
 ```
-- history.html for showing transactions history
+- ```history.html``` for Showing Transactions History
 ```
 <!doctype html>
 <html lang="en">
@@ -232,7 +261,7 @@ def show_transaction_history(transactions_database: dict) -> list:
 
 ```
 
-4. Create a WSGI File for Apache (wsgi.py will be created)
+### 4. Create a WSGI File for Apache
 ```
 # wsgi.py
 import sys
@@ -244,22 +273,22 @@ from app import app as application
 
 ```
 
-5. Use only One from Two Methods Below:
-5.1 Copy/locate the files app.py, transactions.py, wsgi.py and templates folder to the project directory (in case you created all the required files following the steps above)
+### 5. Use ONLY One from The Methods Below:
+- 5.1 Copy/locate the files ```app.py```, ```transactions.py```, ```wsgi.py``` and ```templates folder``` to the project directory *(in case you created all the required files following the steps above)*
 
-5.2 Clone repository, copy files from the Repository to the project directory
+- 5.2 Clone repository, copy files from the Repository to the project directory
 
-*git clone https://github.com/desmondcoacher/budget-manager-web*
+*```git clone https://github.com/desmondcoacher/budget-manager-web```*
 
-*sudo cp -r budget-manager-web/templates budget-manager-web/app.py budget-manager-web/transactions.py budget-manager-web/wsgi.py /var/www/"your-project-name"*
+*```sudo cp -r budget-manager-web/templates budget-manager-web/app.py budget-manager-web/transactions.py budget-manager-web/wsgi.py /var/www/"your-project-name"```*
 
-6. Configure Apache to Use WSGI
-```sudo apt-get install libapache2-mod-wsgi-py3```
+### 6. Configure Apache to Use WSGI
+*```sudo apt-get install libapache2-mod-wsgi-py3```*
 
-**Note:** no need to run the command to enable mode because it will be automatically enabled when installation succeed.
+***Note:*** no need to run the command to enable mode because it will be automatically enabled when installation succeed.
 
-7. Update Virtual Host Configuration
-Add the lines below to your Virtual Host file
+### 7. Update Virtual Host Configuration
+Add the lines below to your Virtual Host file:
 
 *sudo nano /etc/apache2/sites-available/"your-project-name".conf*
 ```
@@ -268,13 +297,25 @@ Add the lines below to your Virtual Host file
 
 ```
 
-8. Install Flask
-```python
-sudo apt install python3-flask
-```
+### 8. Install Flask
+*```sudo apt install python3-flask```*
 
-9. Perform Requeired Changes for HTTPS Workability for the new wbsite *(In Case if Needs)*
+### 9. Perform the Required Changes for HTTPS Workability *(In Case if Needs)*
 
-10. Restart Apache Web Server
-*sudo systemctl restart apache2*
+### 10. Restart Apache Web Server
+*```sudo systemctl restart apache2```*
 
+***Tip:*** use *```sudo tail -f /var/log/apache2/error.log```* command for debugging.
+
+## License
+
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/desmondcoacher/budget-manager-web/blob/main/LICENSE)
+
+## Author
+
+- [@desmondcoacher](https://github.com/desmondcoacher)
+
+
+## Feedback
+
+If you have any feedback, feel free to contact me: desmond.c@campus.technion.ac.il
